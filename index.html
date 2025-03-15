@@ -5,309 +5,351 @@
   <meta charset="utf-8" />
   <meta name="description" content="free lessons,study guides,question papers for grade 10 , grade 11 and grade 12" />
   <meta name="keywords" content="free lessons,study guides,question papers for grade 10 , grade 11 and grade 12" />
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="apple-touch-icon" href="/bala images/bala logo.jpg">
-    <style type="text/css">
-    
-    /* Popup styles */
-    .popup {
-    /* Hide the popup by default */
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 1em;
-    border: 0.1em solid #227AF5;
-    border-radius: 25px;
-    width: 80%;
-    height: 80%;
-    box-shadow: 0px 0px 1em #227AF5;
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="apple-touch-icon" href="/bala images/bala logo.jpg">
+  <title>Online Lessons</title>
+  <style>
+    /* Your existing CSS styles */
+    body {
+      font-family: Arial, verdana, sans-serif;
+      background-color: #0C0C0C;
+      margin: 0;
+      padding: 20px;
     }
-    
-    /* Popup header styles */
-    .popup-header {
-    text-shadow: 0px 0px 0.5em teal;
-    color: black;
-    }
-    
-    /* Scrollable content styles */
-    .scrollable-content {
-    height: 90%;
-    overflow-y: auto;
-    }
-    
-    /* Close popup button styles */
-    .close-popup {
-    position: absolute;
-    top: 1em;
-    right: 2em;
-    background-color: #227AF5;
-    padding: 0.5em 1em;
-    border: none;
-    cursor: pointer;
-    color: white;
-    box-shadow: 0px 0px 0.5em black;
-    border-radius: 8px;
-    }
-    
-    
-    /* Link styles */
-    a {
-    color: #227AF5;
-    }
-    
-    
-    /* Content styles */
-    .content-style {
-    background-color: black;
-    box-shadow: 0px 0px 0.2em #227AF5;
-    width: 97.5%;
-    margin-top: 0;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    border-radius: 1em;
-    padding-left: 0.5em;
-    color: #DBDBDA;
-    text-shadow: 0px 0px 0.05em #227AF5;
-    }
-    
-    
-    
-      .close-btn {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      font-size: 30px;
-      cursor: pointer;
-      color: red;
-      }
-      .logos {
+    .loading-screen {
       position: fixed;
-      height: 40px;
-      width: 100%;
-      text-align: left;
-      margin-top: -0.3em;
+      top: 0;
       left: 0;
-      background-color: #227AF5;
-      padding-left: 0.5em;
-      padding-top: 0.5em;
-      top: 0;
-      letter-spacing: 0.3em;
-      font-size: xx-large;
-      }
-      .l1 {
-      color: #4065A0;
-      text-shadow: 0px 0px 0.06em white;
-      }
-      .l2 {
-      color: white;
-      text-shadow: 0px 0px 0.06em #227AF5;
-      }
-      .sublogo {
-      width: 3em;
-      box-shadow: 0px 0px 3px #227AF5;
-      border-radius: 5px;
-      height: 3em;
-      }
-      .top-nav {
-      position: fixed;
-      }
-      .icon-bar {
-      position: fixed;
-      background-color: #227AF5;
-      width: 10%;
-      height: 2.81em;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
-      padding: 0 1em;
-      box-shadow: 0px 1px 0.06em #227AF5;
-      margin-left: -1em;
-      top: 0;
-      right: 0;
-      }
-      .icon-bar a {
+      z-index: 2000;
+    }
+    .loading-screen h1 {
       color: white;
-      margin: 0 1em;
-      font-size: 1.2em;
-      }
-      .icon-bar a:hover {
-      background-color: #ddd;
-      color: black;
-      }
-      .menu-dropdown {
-      position: absolute;
-      top: 4em;
-      right: 0;
-      background-color: #227AF5;
-      border-radius: 1em;
-      box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
-      display: none;
-      width: 15em;
-      }
-      .menu-item {
-      display: block;
-      padding: 1em;
-      border-bottom: 0.1em solid #ccc;
-      }
-    body { background-color: #0C0C0C;
+      font-size: 2em;
     }
-    
-    
-    
-    
-    .heading { width:90%;
-    height: 100px;
-    margin-left : 5%; 
-    }
-    
-    
-        
-    .options{ width: 20%;
-    height: 50px;
-    box-shadow: 0px 0px 2px  white;
-    text-shadow: 0px 0px 0.5px #287BE5;
-    border-radius: 7px;  
-    margin-left: 25px; 
-    background-color: black;
-    color: #227AF5;
-    border-width: 0.1px;
-    border-color : #287BE5;
-    
-    }   
-    
-    
-    button:active { background-color:  #227AF5;
-    color: white;
-    }
-    
-    
-   {color: white; }
-    
-    
-    </style>
- 
-   <title> Bala</title>
-   </head> 
-  <body>
- 
-<header>
-  <span>
-    <h2 class="logos"><i class="l1">BA<b class="l2">LA</b></i></h2>
-    <!--icons-->
-    <div class="top-nav">
-      <div class="icon-bar">
-        <a href="#" class="menu-icon" onclick="showMenu()">
-          <i class="fas fa-bars"></i>
-        </a>
-        <div class="menu-dropdown" id="menu-dropdown">
-          <a href="#" class="close-button" onclick="hideMenu()">Close</a>
-          <a href="index.html" class="menu-item"><b>Home</b></a>
-          <a href="balaaboutus.html" class="menu-item"><b>About us</b></a>
-          <a href="balatsncs.html" class="menu-item"><b>Ts & Cs</b></a>
-          <a href="balaprivacypolicy.html" class="menu-item"><b>Privacy Policy</b></a>
+   
+   /* Your existing CSS styles */
+   body {
+   font-family: Arial, verdana, sans-serif;
+   background-color: #0C0C0C;
+   margin: 0;
+   padding: 20px;
+   }
+   
+   
+   .playlist {
+   background-color: black;
+   box-shadow: 0px 0px 0.2em #227AF5;
+   color: white;
+   padding: 5px;
+   margin-bottom: 1px;
+   border-radius: 5px;
+   cursor: pointer;
+   width: 30%;
+   height: 100px;
+   border: 0.1px solid #227AF5;
+   text-align: center;
+   margin-left: 4px;
+   }
+   
+   .contact {
+   background-color: black;
+   box-shadow: 0px 0px 0.2em #227AF5;
+   color: white;
+   padding: 5px;
+   border-radius: 5px;
+   cursor: pointer;
+   width: 48%;
+   height: auto;
+   border: 0.1px solid #227AF5;
+   text-align: center;
+   }
+   .img {
+   width: 100%;
+   height: 150px;
+   border-radius: 100px;
+   }
+   .popup {
+   display: none;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.9);
+   z-index: 1000;
+   overflow: auto;
+   }
+   .popup-content {
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 90%;
+   max-width: 800px;
+   height: 90%;
+   max-height: 90vh;
+   background-color: black;
+   border-radius: 10px;
+   color: white;
+   box-shadow: 0px 0px 10px #227AF5;
+   padding: 3px;
+   animation: slideUp 0.5s forwards;
+   }
+   @keyframes slideUp {
+   from {
+   opacity: 0;
+   transform: translate(-50%, 100%);
+   }
+   to {
+   opacity: 1;
+   transform: translate(-50%, -50%);
+   }
+   }
+   .popup-img {
+   width: 35%;
+   height: 200px;
+   border-radius: 10px;
+   }
+   .close-btn {
+   position: absolute;
+   top: 20px;
+   right: 20px;
+   font-size: 30px;
+   cursor: pointer;
+   color: red;
+   }
+   .logos {
+   position: fixed;
+   height: 40px;
+   width: 100%;
+   text-align: left;
+   margin-top: -0.3em;
+   left: 0;
+   background-color: #227AF5;
+   padding-left: 0.5em;
+   padding-top: 0.5em;
+   top: 0;
+   letter-spacing: 0.3em;
+   z-index: 1003;
+   font-size: xx-large;
+   }
+   .l1 {
+   color: #4065A0;
+   text-shadow: 0px 0px 0.06em white;
+   }
+   .l2 {
+   color: white;
+   text-shadow: 0px 0px 0.06em #227AF5;
+   }
+   .sublogo {
+   width: 3em;
+   box-shadow: 0px 0px 3px #227AF5;
+   border-radius: 5px;
+   height: 3em;
+   }
+   .top-nav {
+   position: fixed;
+   z-index: 1100; /* Ensure the top-nav is above the search container */
+   }
+   .icon-bar {
+   position: fixed;
+   background-color: #227AF5;
+   width: 10%;
+   height: 2.81em;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 0 1em;
+   box-shadow: 0px 1px 0.06em #227AF5;
+   margin-left: -1em;
+   top: 0;
+   right: 0;
+   }
+   .icon-bar a {
+   color: white;
+   margin: 0 1em;
+   font-size: 1.2em;
+   }
+   .icon-bar a:hover {
+   background-color: #ddd;
+   color: black;
+   }
+   .menu-dropdown {
+   position: absolute;
+   top: 4em;
+   right: 0;
+   background-color: #227AF5;
+   border-radius: 1em;
+   box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
+   display: none;
+   width: 15em;
+   z-index: 1200; /* Ensure dropdown is above everything */
+   opacity: 0;
+   transform: translateY(-10px);
+   transition: opacity 0.3s ease, transform 0.3s ease;
+   }
+   .menu-dropdown.active {
+   display: block;
+   opacity: 1;
+   transform: translateY(0);
+   }
+   .menu-item {
+   display: block;
+   padding: 1em;
+   border-bottom: 0.1em solid #ccc;
+   color: white;
+   text-decoration: none;
+   }
+   .menu-item:hover {
+   background-color: #4065A0;
+   }
+   .playlist-container {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 10px;
+ margin-top: 40px;
+   }
+   iframe {
+   width: 100%;
+   height: 80vh;
+   border: none;
+   border-radius: 10px;
+   }
+   .hidden {
+   display: none;
+   }
+   .loading-screen {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.9);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   z-index: 2000;
+   }
+   .loading-screen h1 {
+   color: white;
+   font-size: 2em;
+   }
+   .iframe-loading {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   color: white;
+   font-size: 0.5em;
+   }
+   .content-style {
+   background-color: black;
+   box-shadow: 0px 0px 0.2em #227AF5;
+   width: 97.5%;
+   padding-top: 1em;
+   padding-bottom: 1em;
+   border-radius: 1em;
+   padding-left: 0.5em;
+   color: #DBDBDA;
+   text-shadow: 0px 0px 0.05em #227AF5;
+   }
+   
+    /* Other styles... */
+  </style>
+</head>
+<body>
+  <!-- Loading screen -->
+  <div class="loading-screen" id="loading-screen">
+    <h1>Loading...</h1>
+  </div>
+
+  <header>
+    <span>
+      <h2 class="logos"><i class="l1">BA<b class="l2">LA</b></i></h2>
+      <!--icons-->
+      <div class="top-nav">
+        <div class="icon-bar">
+          <a href="#" class="menu-icon" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+          </a>
+          <div class="menu-dropdown" id="menu-dropdown">
+            <a href="#" class="close-button" onclick="toggleMenu()">Close</a>
+            <a href="index.html" class="menu-item"><b>Home</b></a>
+            <a href="balaaboutus.html" class="menu-item"><b>About us</b></a>
+            <a href="balatsncs.html" class="menu-item"><b>Ts & Cs</b></a>
+            <a href="balaprivacypolicy.html" class="menu-item"><b>Privacy Policy</b></a>
+          </div>
         </div>
       </div>
+    </span>
+  </header>
+  <main>
+    <div class="playlist-container">
+      <div class="content-style">
+        <ul><li><h2>Get Started</h2></li></ul>
+        <button class="playlist" onclick="location.href='balalessons.html'"> 
+          <i class="fas fa-video fa-2x"></i>
+          <b><p>STUDY LESSONS</p></b> 
+        </button>
+        <button class="playlist" onclick="location.href='balastudyguides.html'"> 
+          <i class="fas fa-book fa-2x"></i>
+          <b><p>STUDY GUIDES</p></b> 
+        </button>
+        <button class="playlist" onclick="location.href='balaquestionpapers.html'"> 
+          <i class="fas fa-file fa-2x"></i>
+          <b><p>PAST PAPERS</p></b> 
+        </button>
+      </div>
     </div>
-  </span>
- </header>
-
-
-<main>
-<br>
-
-
-<br><br>
-<div class="content-style">
-<h1>Welcome to Bala!</h1>
-
-<button  class="options" onclick="location.href='balalessons.html'"><i class="fas fa-video"></i><br><b>Free Lessons</b></button>
-
-<button  class="options" onclick="location.href='balastudyguides.html'"><i class="fas fa-book "></i><br><b>Study Guides</b></button>
-
-<button  class="options" onclick="location.href='balaquestionpapers.html'"><i class="fas fa-file"></i><br><b>Question papers</b></button>
-
-<br>
-
-
-
-</div>
-<br>
-
-
-<div class="content-style">
-
-
-<h2>Unlock the full potential of your education with our comprehensive online learning platform!</h2>
-
-<h3>Free Study Guides, Lessons, and Past Papers</h3>
-
-<p>Get instant access to thousands of high-quality study resources, carefully curated to help you succeed in your studies.</p>
-
-<h3>Learn Faster, Smarter, and More Effectively</h3>
-
-<p>Improve your grades and confidence, develop a deeper understanding of complex concepts, and stay ahead of the class with our up-to-date study materials.</p>
-
-<h3>Join Our Community of Learners Today!</h3>
-
-<p>Get access to thousands of free study resources and regular updates with new study materials and resources.</p>
-
-<button  class="options" onclick="location.href='https://whatsapp.com/channel/0029Vb9RkHiB4hdQyUZvJ743'"><b>JOIN</b></button>
-</div>
-</main>
-<br>
-
-
-<!--footer-->
-<footer class="content-style">
-
-<h5>COPYRIGHT :BALA PLATFORMS 2024| All other trademarks and copyrights are the property of their respective owners</h5>
-<p><a href="balaprivacypolicy.html" >Privacy policy</a>|<a href="balatsncs.html"> Ts & Cs</a>|<a href="balaaboutus.html">About us/Contact us</a>
-</footer>
-
-
-
-<script type="text/javascript">
-
-//MENU DROPDOWN
-
-function showMenu() {
-document.getElementById("menu-dropdown").style.display = "block";
-}
-
-function hideMenu() {
-document.getElementById("menu-dropdown").style.display = "none";
-}
+   
+   <br>
   
-
-
-//POPUP
-
-const popups = document.querySelectorAll('.popup');
-  const openPopupButtons = document.querySelectorAll('[id^="open-popup"]');
-  const closePopupButtons = document.querySelectorAll('[id^="close-popup"]');
   
-  openPopupButtons.forEach((button, index) => {
-    button.addEventListener("click", function() {
-      popups[index].style.display = "block";
+    <div class="content-style">
+      <ul><li> <h2>Follow us</h2></li></ul>
+      <button class="contact" onclick="location.href='https://www.facebook.com/profile.php?id=61570192294949'"> 
+        <img src="/bala images/facebook logo.jpg" class="img" loading="lazy"><br><p>Facebook</p>
+      </button>
+      <button class="contact" onclick="location.href='https://whatsapp.com/channel/0029Vb9RkHiB4hdQyUZvJ743'"> 
+        <img src="/bala images/whatsapp logo.jpg" class="img" loading="lazy"><br><p>WhatsApp</p>
+      </button>
+    </div>
+  </main>
+  <br>
+  <!--footer-->
+  <footer class="content-style">
+    <h5>COPYRIGHT :BALA PLATFORMS 2024| All other trademarks and copyrights are the property of their respective owners</h5>
+    <p><a href="balaprivacypolicy.html" >Privacy policy</a>|<a href="balatsncs.html"> Ts & Cs</a>|<a href="balaaboutus.html">About us/Contact us</a>
+  </footer>
+  
+  <script>
+    // Loading screen functionality
+    setTimeout(() => {
+      document.getElementById('loading-screen').style.display = 'none';
+    }, 2000); // 2000 milliseconds = 2 seconds
+
+    // Function to toggle the menu dropdown
+    function toggleMenu() {
+      const menuDropdown = document.getElementById('menu-dropdown');
+      menuDropdown.classList.toggle('active');
+    }
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(event) {
+      const menuDropdown = document.getElementById('menu-dropdown');
+      const menuIcon = document.querySelector('.menu-icon');
+      if (!menuDropdown.contains(event.target) && !menuIcon.contains(event.target)) {
+        menuDropdown.classList.remove('active');
+      }
     });
-  });
-  
-  closePopupButtons.forEach((button, index) => {
-    button.addEventListener("click", function() {
-      popups[index].style.display = "none";
-    });
-  });
-
-
-
-
-
-</script>
-
+  </script>
 </body>
 </html>
