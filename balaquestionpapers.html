@@ -1,0 +1,477 @@
+<!doctype html>
+  <html lang="en-ZA">
+  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+  <meta charset="utf-8" />
+  <meta name="description" content="free lessons,study guides,question papers for grade 10 , grade 11 and grade 12" />
+  <meta name="keywords" content="free lessons,study guides,question papers for grade 10 , grade 11 and grade 12" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="apple-touch-icon" href="/bala images/bala logo.jpg">
+  
+  <title>STUDY GUIDES</title>
+  <style>
+    /* Your existing CSS styles */
+    body {
+      font-family: Arial, verdana, sans-serif;
+      background-color: #0C0C0C;
+      margin: 0;
+      padding: 20px;
+    }
+    h4 {
+      color: #F5F5F5;
+      text-shadow: 0px 0px 0.1px white;
+      box-shadow: 0px 1px 1px #227AF5;
+      text-align: center;
+      background-color: black;
+      margin-top: -11px;
+      margin-left: -8px;
+    }
+    .join-whatsapp-channel-link {
+      text-align: center;
+      margin-bottom: -5px;
+      color: #26D267;
+      text-shadow: 0px 0px 1px #227AF5;
+    }
+.playlist {
+   background-color: black;
+   box-shadow: 0px 0px 0.2em #227AF5;
+   color: white;
+   padding: 5px;
+   margin-bottom: 10px;
+   border-radius: 5px;
+   cursor: pointer;
+   width: 45%;
+   height: auto;
+   border: 0.1px solid #227AF5;
+   text-align: center;
+ }
+    .img {
+      width: 100%;
+      height: 150px;
+      border-radius: 30px;
+    }
+    .search-container {
+      margin-top: -155px;
+      position: fixed;
+      box-shadow: 0px 1px 1px #227AF5;
+      background-color: #0C0C0C;
+      left: 0;
+      width: 100%;
+      height: 75px;
+      padding: 8px;
+      z-index: 1000; /* Ensure search container is above other content */
+    }
+    #search-input {
+      width: 70%;
+      padding: 5px;
+      border: 1px solid #227AF5;
+      border-radius: 5px;
+      position: fixed;
+    }
+    #search-button {
+      padding: 5px 10px;
+      background-color: #227AF5;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      position: fixed;
+      margin-left: 78%;
+    }
+    .popup {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      z-index: 1000;
+      overflow: auto;
+    }
+    .popup-content {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      max-width: 800px;
+      height: 90%;
+      max-height: 90vh;
+      background-color: black;
+      border-radius: 10px;
+      color: white;
+      box-shadow: 0px 0px 10px #227AF5;
+      padding: 3px;
+      animation: slideUp 0.5s forwards;
+    }
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translate(-50%, 100%);
+      }
+      to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+      }
+    }
+    .popup-img {
+      width: 35%;
+      height: 200px;
+      border-radius: 10px;
+    }
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 30px;
+      cursor: pointer;
+      color: red;
+    }
+    .logos {
+      position: fixed;
+      height: 40px;
+      width: 100%;
+      text-align: left;
+      margin-top: -0.3em;
+      left: 0;
+      background-color: #227AF5;
+      padding-left: 0.5em;
+      padding-top: 0.5em;
+      top: 0;
+      letter-spacing: 0.3em;
+      font-size: xx-large;
+    }
+    .l1 {
+      color: #4065A0;
+      text-shadow: 0px 0px 0.06em white;
+    }
+    .l2 {
+      color: white;
+      text-shadow: 0px 0px 0.06em #227AF5;
+    }
+    .sublogo {
+      width: 3em;
+      box-shadow: 0px 0px 3px #227AF5;
+      border-radius: 5px;
+      height: 3em;
+    }
+    .top-nav {
+      position: fixed;
+      z-index: 1100; /* Ensure the top-nav is above the search container */
+    }
+    .icon-bar {
+      position: fixed;
+      background-color: #227AF5;
+      width: 10%;
+      height: 2.81em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 1em;
+      box-shadow: 0px 1px 0.06em #227AF5;
+      margin-left: -1em;
+      top: 0;
+      right: 0;
+    }
+    .icon-bar a {
+      color: white;
+      margin: 0 1em;
+      font-size: 1.2em;
+    }
+    .icon-bar a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+    .menu-dropdown {
+      position: absolute;
+      top: 4em;
+      right: 0;
+      background-color: #227AF5;
+      border-radius: 1em;
+      box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
+      display: none;
+      width: 15em;
+      z-index: 1200; /* Ensure dropdown is above everything */
+    }
+    .menu-dropdown.active {
+      display: block;
+    }
+    .menu-item {
+      display: block;
+      padding: 1em;
+      border-bottom: 0.1em solid #ccc;
+    }
+    .playlist-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 180px;
+    }
+    iframe {
+      width: 100%;
+      height: 80vh;
+      border: none;
+      border-radius: 10px;
+    }
+    .hidden {
+      display: none;
+    }
+    .loading-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 2000;
+    }
+    .loading-screen h1 {
+      color: white;
+      font-size: 2em;
+    }
+    .iframe-loading {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 0.5em;
+    }
+   
+ footer {
+ background-color: black;
+ box-shadow: 0px 0px 0.2em #227AF5;
+ width: 97.5%;
+ margin-top: 0;
+ padding-top: 1em;
+ padding-bottom: 1em;
+ border-radius: 1em;
+ padding-left: 0.5em;
+ color: #DBDBDA;
+ text-shadow: 0px 0px 0.05em #227AF5;
+ } 
+  
+   
+  </style>
+</head>
+<body>
+  <!-- Loading screen -->
+  <div class="loading-screen" id="loading-screen">
+    <h1>Loading...</h1>
+  </div>
+
+  <header>
+    <span>
+      <h2 class="logos"><i class="l1">BA<b class="l2">LA</b></i></h2>
+      <!--icons-->
+      <div class="top-nav">
+        <div class="icon-bar">
+          <a href="#" class="menu-icon" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+          </a>
+          <div class="menu-dropdown" id="menu-dropdown">
+            <a href="#" class="close-button" onclick="toggleMenu()">Close</a>
+            <a href="index.html" class="menu-item"><b>Home</b></a>
+            <a href="about_us.html" class="menu-item"><b>About us</b></a>
+            <a href="privacy_policy.html" class="menu-item"><b>Contact us</b></a>
+            <a href="about_us.html" class="menu-item"><b>Ts & Cs</b></a>
+            <a href="privacy_policy.html" class="menu-item"><b>Privacy Policy</b></a>
+          </div>
+        </div>
+      </div>
+    </span>
+  </header>
+  <main>
+    <!-- Search container -->
+    <div class="search-container">
+      <input type="text" id="search-input" placeholder="Search by subject name and grade." aria-label="Search playlists">
+      <button id="search-button" aria-label="Search"><i class="fas fa-search"></i></button>
+      <br>
+      <a href="#" class="join-whatsapp-channel-link">
+        <h5>Join our WhatsApp channel to recieve notifications <br>when we upload new study guides. CLICK HERE!</h5>
+      </a>
+      <h4> EXPLORE STUDY GUIDES!</h4>
+    </div>
+    <div class="playlist-container" id="playlist-container">
+      <!-- Playlists will be dynamically inserted here -->
+    </div>
+  </main>
+
+  <!-- Popups will be dynamically inserted here -->
+<!--footer-->
+<footer class="content-style">
+
+<h5>COPYRIGHT :BALA PLATFORMS 2024| All other trademarks and copyrights are the property of their respective owners</h5>
+<p><a href="balaprivacypolicy.html" >Privacy policy</a>|<a href="balatsncs.html"> Ts & Cs</a>|<a href="balaaboutus.html">About us/Contact us</a>
+</footer>
+ 
+  <script>
+    // Function to toggle the menu dropdown
+    function toggleMenu() {
+      const menuDropdown = document.getElementById('menu-dropdown');
+      menuDropdown.classList.toggle('active');
+    }
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(event) {
+      const dropdown = document.getElementById('menu-dropdown');
+      const menuIcon = document.querySelector('.menu-icon');
+      if (!dropdown.contains(event.target) && !menuIcon.contains(event.target)) {
+        dropdown.classList.remove('active');
+      }
+    });
+
+    // Data structure for playlists
+  
+    
+      const playlists = [
+{
+id: 'popup1',
+    imageSrc: '/bala images/testpapers logo.jpg', // Removed /storage/emulated/0
+    title: 'Grade 12',
+    iframeSrc: 'https://www.testpapers.co.za/gr12-subjects'
+  },
+  {
+    id: 'popup2',
+    imageSrc: '/bala images/testpapers logo.jpg', // Removed /storage/emulated/0
+    title: 'Grade 11',
+    iframeSrc: 'https://www.testpapers.co.za/gr11-subjects'
+  },
+  {
+    id: 'popup3',
+    imageSrc: '/bala images/testpapers logo.jpg', // Removed /storage/emulated/0
+    title: 'Grade 10',
+    iframeSrc: 'https://www.testpapers.co.za/gr10-subjects'
+  }
+  
+      
+      // Add more playlists here...
+    ];
+
+    // Function to generate playlists and popups
+    function generatePlaylists() {
+      const playlistContainer = document.getElementById('playlist-container');
+      
+      playlists.forEach(playlist => {
+        // Create playlist element
+        const playlistDiv = document.createElement('div');
+        playlistDiv.className = 'playlist';
+        playlistDiv.onclick = () => openPopup(playlist.id);
+        
+        const img = document.createElement('img');
+        img.className = 'img';
+        img.src = playlist.imageSrc;
+        img.alt = playlist.title;
+        img.loading = 'lazy'; // Add lazy loading
+        
+        const span = document.createElement('span');
+        span.textContent = playlist.title;
+        
+        playlistDiv.appendChild(img);
+        playlistDiv.appendChild(document.createElement('br'));
+        playlistDiv.appendChild(span);
+        
+        playlistContainer.appendChild(playlistDiv);
+        
+        // Create popup element
+        const popupDiv = document.createElement('div');
+        popupDiv.className = 'popup';
+        popupDiv.id = playlist.id;
+        
+        const popupContent = document.createElement('div');
+        popupContent.className = 'popup-content';
+        
+        const closeBtn = document.createElement('span');
+        closeBtn.className = 'close-btn';
+        closeBtn.innerHTML = '&times;';
+        closeBtn.onclick = () => closePopup(playlist.id);
+        
+        const iframeLoading = document.createElement('div');
+        iframeLoading.className = 'iframe-loading';
+        iframeLoading.textContent = 'Loading ...';
+        
+        const iframe = document.createElement('iframe');
+        iframe.dataset.src = playlist.iframeSrc; // Use data-src instead of src
+        
+        popupContent.appendChild(closeBtn);
+        popupContent.appendChild(document.createElement('br'));
+        popupContent.appendChild(document.createElement('br'));
+        popupContent.appendChild(document.createElement('br'));
+        popupContent.appendChild(iframeLoading);
+        popupContent.appendChild(iframe);
+        
+        popupDiv.appendChild(popupContent);
+        document.body.appendChild(popupDiv);
+      });
+    }
+
+    // Function to open a specific popup
+    function openPopup(popupId) {
+      const allPopups = document.querySelectorAll('.popup');
+      allPopups.forEach(popup => {
+        if (popup.id !== popupId) {
+          popup.style.display = 'none';
+        }
+      });
+
+      const popup = document.getElementById(popupId);
+      const iframe = popup.querySelector('iframe');
+
+      if (!iframe.src && iframe.dataset.src) {
+        iframe.src = iframe.dataset.src;
+      }
+
+      popup.style.display = 'block';
+    }
+
+    // Function to close a specific popup
+    function closePopup(popupId) {
+      const popup = document.getElementById(popupId);
+      popup.style.display = 'none';
+    }
+
+    // Search Functionality
+    document.getElementById('search-input').addEventListener('input', function() {
+      const searchValue = this.value.toLowerCase().trim();
+      const searchWords = searchValue.split(/\s+/);
+      
+      const playlists = document.querySelectorAll('.playlist');
+      playlists.forEach(playlist => {
+        const title = playlist.querySelector('span').textContent.toLowerCase();
+        
+        const matches = searchWords.every(word => title.includes(word));
+        
+        if (matches) {
+          playlist.style.display = 'block';
+        } else {
+          playlist.style.display = 'none';
+        }
+      });
+    });
+
+    // Loading screen functionality
+    setTimeout(() => {
+      document.getElementById('loading-screen').style.display = 'none';
+    }, 6000);
+
+    // Generate playlists and popups on page load
+    generatePlaylists();
+
+    // Close popup on pressing Escape key
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        const openPopup = document.querySelector('.popup[style="display: block;"]');
+        if (openPopup) {
+          closePopup(openPopup.id);
+        }
+      }
+    });
+  </script>
+</body>
+</html>

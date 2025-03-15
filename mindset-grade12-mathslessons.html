@@ -1,0 +1,375 @@
+  <!doctype html>
+  <html lang="en-ZA">
+  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+  <meta charset="utf-8" />
+  <meta name="description" content="free lessons,study guides,question papers for grade 10 , grade 11 and grade 12" />
+  <meta name="keywords" content="free lessons,study guides,question papers for grade 10 , grade 11 and grade 12" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="apple-touch-icon" href="/bala images/bala logo.jpg">
+  <style type="text/css">
+  /* Your existing CSS styles */
+  iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 70%;
+  height: 100vh;
+  border: none;
+  }
+  
+  /* Dropdown Button */
+  .dropbtn {
+  background-color: black;
+  color: red;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  position: fixed; /* Changed to fixed */
+  top: 10px;
+  right: 10px;
+  z-index: 1001; /* Ensure it's above other elements */
+  box-shadow: 0px 0px 2px #227AF5;
+  border-radius: 5px;
+  border: 1px solid #227AF5;
+  transition: background-color 0.3s ease;
+  }
+  
+  .dropbtn:hover {
+  background-color: #111;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+  display: none;
+  position: fixed; /* Changed to fixed */
+  top: 50px;
+  right: 10px;
+  background-color: black;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  max-height: 200px;
+  overflow-y: auto;
+  border-radius: 5px;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  .dropdown-content.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  }
+  
+  /* Buttons inside the dropdown */
+  .dropdown-content button {
+  color: #227AF5;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  }
+  
+  /* Change color of dropdown buttons on hover */
+  .dropdown-content button:hover {
+  background-color: #333;
+  }
+  
+  body {
+  overflow: hidden;
+  background-color: black;
+  }
+  
+  .side-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30%;
+  height: 100vh;
+  }
+  
+  .rotating-images {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30%;
+  height: 100vh;
+  display: none;
+  }
+  
+  .rotating-images img, .rotating-images video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  }
+  
+  /* Profile Section */
+  .profile-section {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  background-color: #0C0C0C;
+  z-index: 1;
+  box-shadow: 0px 0px 2px #227AF5;
+  }
+  
+  .profile-section img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  }
+  
+  .profile-section h2 {
+  margin: 0;
+  font-size: 1.5em;
+  }
+  
+  .profile-section a {
+  color: #227AF5;
+  text-decoration: none;
+  margin: 5px 0;
+  }
+  
+  .profile-section a:hover {
+  text-decoration: underline;
+  }
+  
+  /* Popup styles */
+  .popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: black;
+  padding: 20px;
+  border: 1px solid #227AF5;
+  border-radius: 10px;
+  width: 70%;
+  height: 40%;
+  overflow: auto;
+  color: white;
+  text-align: center;
+  text-shadow: 0px 0px 3px #227AF5;
+  box-shadow: 0px 0px 3px #227AF5;
+  z-index: 1001;
+  }
+  
+  .popup.show {
+  display: block;
+  }
+  
+  img {
+  width: 97.5%;
+  }
+  
+  .fa-spin {
+  animation: spin 1s linear infinite;
+  color: white;
+  margin-top: 5%;
+  }
+  
+  @keyframes spin {
+  0% {
+  transform: rotate(0deg);
+  }
+  100% {
+  transform: rotate(90deg);
+  }
+  }
+  
+  #close-popup {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: red;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 1002; /* Ensure it's above other elements */
+  }
+  </style>
+  <title>BALA CLASSROOM</title>
+  </head>
+  <body>
+  
+  <!-- Dropdown -->
+  <div class="dropdown">
+  <button class="dropbtn" onclick="toggleDropdown()"><b> <i class="fas fa-film"></i></b></button>
+  <div class="dropdown-content" id="dropdown-content">
+  <!-- Manually add buttons with YouTube embedded links -->
+  <button onclick="changeVideo('https://www.youtube.com/embed/GMS-IsCgDyk?autoplay=1&vq=hd1080&fs=0&showinfo=0&rel=0&enablejsapi=1&modestbranding=1&color=white&start=&end=&controls=1')">1,Sequence and Series Part 1</button>
+  <button onclick="changeVideo('https://www.youtube.com/embed/u2Z1PHq2skU?autoplay=1&vq=hd1080&fs=0&showinfo=0&rel=0&enablejsapi=1&modestbranding=1&color=white&start=&end=&controls=1')">2,Sequence and Series Part 2</button>
+  <button onclick="changeVideo('https://www.youtube.com/embed/u_3wZBWLJKo?autoplay=1&vq=hd1080&fs=0&showinfo=0&rel=0&enablejsapi=1&modestbranding=1&color=white&start=&end=&controls=1')">3,Functions and Graphs</button>
+  <button onclick="changeVideo('https://www.youtube.com/embed/gvdLrGe2AWI?autoplay=1&vq=hd1080&fs=0&showinfo=0&rel=0&enablejsapi=1&modestbranding=1&color=white&start=&end=&controls=1')">4,Inverse Functions and Graphs</button>
+  <button onclick="changeVideo('https://www.youtube.com/embed/4Lpn9WYGzE0?autoplay=1&vq=hd1080&fs=0&showinfo=0&rel=0&enablejsapi=1&modestbranding=1&color=white&start=&end=&controls=1')">5,Exponents and Logarithms</button>
+  <button onclick="changeVideo('https://www.youtube.com/embed/EFPoY3ZWqnY?autoplay=1&vq=hd1080&fs=0&showinfo=0&rel=0&enablejsapi=1&modestbranding=1&color=white&start=&end=&controls=1')">6,Graphs from Linear to Log</button>
+  <button onclick="changeVideo('https://www.youtube.com/embed/k4EUWiqQynE?autoplay=1&vq=hd1080&fs=0&showinfo=0&rel=0&enablejsapi=1&modestbranding=1&color=white&start=&end=&controls=1')">7,Financial Maths Part 1</button>
+  <button onclick="changeVideo('https://www.youtube.com/embed/_2wGMicFONM?autoplay=1&vq=hd1080&fs=0&showinfo=0&rel=0&enablejsapi=1&modestbranding=1&color=white&start=&end=&controls=1')">8,Financial Maths Part 2</button>
+  <button onclick="changeVideo('https://www.youtube.com/embed/1kQVqTQaUe8?autoplay=1&vq=hd1080&fs=0&showinfo=0&rel=0&enablejsapi=1&modestbranding=1&color=white&start=&end=&controls=1')">9,Trigonometry Identities/Transformations</button>
+  <button onclick="changeVideo('https://www.youtube.com/embed/KJwbkHNDXVk?autoplay=1&vq=hd1080&fs=0&showinfo=0&rel=0&enablejsapi=1&modestbranding=1&color=white&start=&end=&controls=1')">10,Trigonometry</button>
+  <button onclick="changeVideo('https://www.youtube.com/embed/BzrbmkQb-OM?autoplay=1&vq=hd1080&fs=0&showinfo=0&rel=0&enablejsapi=1&modestbranding=1&color=white&start=&end=&controls=1')">11,3D Trigonometry</button>
+  <button onclick="changeVideo('https://www.youtube.com/embed/7Ufv0X5y0fc?autoplay=1&vq=hd1080&fs=0&showinfo=0&rel=0&enablejsapi=1&modestbranding=1&color=white&start=&end=&controls=1')">12,Introduction to Differential Calculus</button>
+  <button onclick="changeVideo('https://www.youtube.com/embed/SZeUtS3QTkQ?autoplay=1&vq=hd1080&fs=0&showinfo=0&rel=0&enablejsapi=1&modestbranding=1&color=white&start=&end=&controls=1')">13,Calculus Application Part 1</button>
+  <button onclick="changeVideo('https://www.youtube.com/embed/ShN5FXb9kls?autoplay=1&vq=hd1080&fs=0&showinfo=0&rel=0&enablejsapi=1&modestbranding=1&color=white&start=&end=&controls=1')">14,Calculus Application Part 3</button>
+  <button onclick="changeVideo('https://www.youtube.com/embed/Z5StYOXajVY?autoplay=1&vq=hd1080&fs=0&showinfo=0&rel=0&enablejsapi=1&modestbranding=1&color=white&start=&end=&controls=1')">15,Co-ordinate Geometry: Circles and Tangents</button>
+  <button onclick="changeVideo('https://www.youtube.com/embed/HnVK3UeTGI4?autoplay=1&vq=hd1080&fs=0&showinfo=0&rel=0&enablejsapi=1&modestbranding=1&color=white&start=&end=&controls=1')">16,Euclidean Geometry</button>
+  <button onclick="changeVideo('https://www.youtube.com/embed/dT8ASE3yYzg?autoplay=1&vq=hd1080&fs=0&showinfo=0&rel=0&enablejsapi=1&modestbranding=1&color=white&start=&end=&controls=1')">17,Statistics</button>
+  <button onclick="changeVideo('https://www.youtube.com/embed/UymCw9J9Q4c?autoplay=1&vq=hd1080&fs=0&showinfo=0&rel=0&enablejsapi=1&modestbranding=1&color=white&start=&end=&controls=1')">18,Probability</button>
+  <button onclick="changeVideo('https://www.youtube.com/embed/AXZxgrKoSls?autoplay=1&vq=hd1080&fs=0&showinfo=0&rel=0&enablejsapi=1&modestbranding=1&color=white&start=&end=&controls=1')">19,Maths Fusion</button>
+  
+  <!-- Add other buttons here -->
+  </div>
+  </div>
+  
+  <iframe id="video-iframe" src="" title="lesson video" frameborder="0" allowfullscreen></iframe>
+  <div id="default-image">
+  <img src="/bala images/default-image.jpg" alt="Default Image" style="width: 70%; height: 100vh; object-fit: cover;">
+  </div>
+  <div class="rotating-images" id="rotating-images"></div>
+  
+  <!-- Profile Section -->
+  <div class="profile-section" id="profile-section">
+  <img src="/bala images/mindset logo.jpg" alt="Profile Picture">
+  <h2>Mindset Learn</h2>
+  <a href="https://www.facebook.com/LearnXtra" target="_blank">Facebook</a>
+  <a href="https://youtube.com/@mindsetlearn?si=0PFvoj9NyNgImoyv" target="_blank">Youtube</a>
+  <a href="http://learn.mindset.africa/" target="_blank">Website</a>
+  </div>
+  
+  <div class="popup" id="popup">
+  <button id="close-popup" onclick="closePopup()">&times;</button>
+  <i class="fas fa-mobile-alt fa-spin fa-5x"></i>
+  <h3>Rotate screen <br> for the best experience !</h3>
+  </div>
+  
+  <script type="text/javascript">
+  // Function to toggle dropdown
+  function toggleDropdown() {
+  const dropdownContent = document.getElementById('dropdown-content');
+  dropdownContent.classList.toggle('show');
+  }
+  
+  // Close dropdown when clicking outside
+  document.addEventListener('click', function (event) {
+  const dropdown = document.querySelector('.dropdown');
+  const dropdownContent = document.getElementById('dropdown-content');
+  if (!dropdown.contains(event.target)) {
+  dropdownContent.classList.remove('show');
+  }
+  });
+  
+  // Function to change the iframe video source and close the dropdown
+  function changeVideo(videoLink) {
+  const iframe = document.getElementById('video-iframe');
+  iframe.src = videoLink;
+  
+  // Hide the default image
+  const defaultImage = document.getElementById('default-image');
+  defaultImage.style.display = 'none';
+  
+  // Close the dropdown
+  const dropdownContent = document.getElementById('dropdown-content');
+  dropdownContent.classList.remove('show');
+  }
+  
+  // Function to load and rotate images
+  function rotateImages(images, displayDuration, pauseDuration, transitionDuration) {
+  const rotatingImagesDiv = document.getElementById('rotating-images');
+  const profileSection = document.getElementById('profile-section');
+  let currentIndex = 0;
+  
+  // Preload images
+  images.forEach(src => {
+  const img = new Image();
+  img.src = src.url; // Use the URL from the image object
+  });
+  
+  // Function to show the next image
+  function showNextImage() {
+  // Hide profile section
+  profileSection.style.display = 'none';
+  
+  // Show rotating images div
+  rotatingImagesDiv.style.display = 'block';
+  
+  // Set the current image with a link
+  rotatingImagesDiv.innerHTML = `
+  <a href="${images[currentIndex].link}" target="_blank">
+  <img src="${images[currentIndex].url}" alt="Rotating Image">
+  </a>
+  `;
+  
+  // Move to the next image
+  currentIndex = (currentIndex + 1) % images.length;
+  
+  // Schedule the next image after displayDuration
+  setTimeout(() => {
+  // Hide rotating images and show profile section
+  rotatingImagesDiv.style.display = 'none';
+  profileSection.style.display = 'flex';
+  
+  // Schedule the next rotation after pauseDuration
+  setTimeout(showNextImage, pauseDuration);
+  }, displayDuration);
+  }
+  
+  // Start the rotation after a delay
+  setTimeout(showNextImage, transitionDuration);
+  }
+  
+  // Define your images, links, and durations
+  const images = [
+  { url: 'bala images/via afrika grade 12 agricultural science.jpg', link: 'balastudyguides.html' },
+  { url: 'bala images/via afrika grade 12 mathematics .jpg', link: 'balastudyguides.html' },
+  { url: 'bala images/handbook.jpg', link: 'balastudyguides.html' },
+  { url: 'bala images/Answer series.jpg', link: 'balastudyguides.html' },
+  { url: 'bala images/mind the gap grade 12 life science .jpg', link: 'balastudyguides.html'},
+  { url: 'bala images/via afrika grade 12 geography .jpg', link: 'balastudyguides.html' },
+  { url: 'bala images/mind the gap grade 12 accounting .jpg', link: 'balastudyguides.html' },
+  { url: 'bala images/siyavula grade 12 physical science .jpg', link: 'balastudyguides.html' },
+  ];
+  const displayDuration = 7000; // 7 seconds per image
+  const pauseDuration = 30000; // 20 seconds pause before showing images again
+  const transitionDuration = 30000; // 30 seconds initial delay
+  
+  // Start rotating images
+  rotateImages(images, displayDuration, pauseDuration, transitionDuration);
+  
+  // Function to show the popup
+  function showPopup() {
+  const popup = document.getElementById('popup');
+  popup.classList.add('show');
+  }
+  
+  // Function to close the popup
+  function closePopup() {
+  const popup = document.getElementById('popup');
+  popup.classList.remove('show');
+  }
+  
+  // Show the popup when the page loads
+  window.onload = showPopup;
+  </script>
+  </body>
+  </html>
